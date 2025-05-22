@@ -1,0 +1,12 @@
+En este control de asistencias de un hospital, se le 
+implementara una ventana junto a un boton para que se
+pueda colocar el nombre del empleado, tambien 
+un apartado donde pueda presionar en que turno esta,
+se le agregara un boton para guardar datos y 
+otro boton para mostrar los datos que se agregaron previamente.
+Tambien se le agregara un apartado para que pueda 
+colocar en el horario que trabaja el empleado.
+Y finalmente un apartado para que coloque si es genero 
+masculino o femenino.
+
+AUNQUE SE ESPERA QUE TENGA CAMBIOS!!
