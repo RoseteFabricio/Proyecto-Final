@@ -119,3 +119,26 @@ def registrar_asistencia():
     entry_actual = tk.Entry(ventana_asistencia)
     entry_actual.pack()
     tk.Button(ventana_asistencia, text="Registrar", command=procesar).pack(pady=10)
+def ver_horario():
+    try:
+        hora = float(simpledialog.askstring("Hora Actual", "Ingresa la hora actual (ej. 14.5 para 2:30 pm):"))
+    except:
+        messagebox.showerror("Error", "Hora inválida.")
+        return
+    if 6 <= hora < 12:
+        mensaje = "Horario actual: Mañana"
+    elif 12 <= hora < 18:
+        mensaje = "Horario actual: Tarde"
+    else:
+        mensaje = "Horario actual: Noche"
+    messagebox.showinfo("Horario", mensaje)
+ventana = tk.Tk()
+ventana.title("Menú Principal - Control de Asistencia")
+ventana.geometry("400x400")
+tk.Label(ventana, text="CONTROL DE ASISTENCIA", font=("Arial", 16, "bold")).pack(pady=20)
+tk.Button(ventana, text="Registrar Trabajador", width=30, height=2, command=registrar_trabajador).pack(pady=5)
+tk.Button(ventana, text="Mostrar Trabajadores", width=30, height=2, command=mostrar_trabajadores).pack(pady=5)
+tk.Button(ventana, text="Registrar Asistencia", width=30, height=2, command=registrar_asistencia).pack(pady=5)
+tk.Button(ventana, text="Ver Horario Actual", width=30, height=2, command=ver_horario).pack(pady=5)
+tk.Button(ventana, text="Salir", width=30, height=2, command=ventana.quit).pack(pady=20)
+ventana.mainloop()
